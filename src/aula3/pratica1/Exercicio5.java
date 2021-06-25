@@ -27,7 +27,7 @@ public class Exercicio5 {
         while(numbersFound <= n) {
             int frequency = digitFrequency(number, d);
 
-            if(frequency == m) {
+            if(frequency >= m) {
                 System.out.println(number);
                 numbersFound++;
             }
