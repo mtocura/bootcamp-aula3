@@ -65,7 +65,7 @@ public class RadixSort {
                 }
 
                // passamos uma nova referência de lista para a chave
-                map.put(key, new ArrayList<>());
+                l.clear();
             }
 
             count++;
