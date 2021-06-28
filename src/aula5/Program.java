@@ -18,5 +18,19 @@ public class Program {
        for(Pessoa p : arr) {
            System.out.println(p);
        }
+
+       Celular c1 = new Celular("011", "4332-6789");
+       Celular c2 = new Celular("012", "1239-6789");
+       Celular c3 = new Celular("011", "5039-6789");
+       Celular c4 = new Celular("011", "2309-6789");
+       Celular c5 = new Celular("012", "6079-6789");
+
+       Celular[] celulares = {c1, c2, c3, c4, c5};
+
+       SortUtil.sort(celulares);
+
+       for(Celular c : celulares) {
+           System.out.println(c);
+       }
     }
 }
