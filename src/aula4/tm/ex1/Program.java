@@ -1,4 +1,4 @@
-package aula4.ex1;
+package aula4.tm.ex1;
 
 import java.math.BigDecimal;
 

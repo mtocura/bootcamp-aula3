@@ -1,4 +1,4 @@
-package aula4.ex3;
+package aula4.tm.ex3;
 
 public class Book {
     /*

@@ -1,4 +1,4 @@
-package aula4.ex4;
+package aula4.tm.ex4;
 
 public class Fracao {
     /*

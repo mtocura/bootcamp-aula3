@@ -1,4 +1,4 @@
-package aula4.ex5;
+package aula4.tm.ex5;
 
 public class Program {
     public static void main(String[] args) {
