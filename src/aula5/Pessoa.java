@@ -1,6 +1,6 @@
 package aula5;
 
-public class Pessoa implements Precedente{
+public class Pessoa implements Precedente<Pessoa>{
     private String nome;
     private String cpf;
 
@@ -26,8 +26,8 @@ public class Pessoa implements Precedente{
     }
 
     @Override
-    public int precede(Object o) {
-        return this.nome.compareToIgnoreCase(((Pessoa) o).getNome());
+    public int precede(Pessoa o) {
+        return this.nome.compareToIgnoreCase(o.getNome());
     }
 
     @Override

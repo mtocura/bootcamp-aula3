@@ -1,6 +1,6 @@
 package aula5;
 
-public class Celular implements Precedente{
+public class Celular implements Precedente<Celular>{
     private String holder;
     private String number;
 
@@ -26,8 +26,8 @@ public class Celular implements Precedente{
     }
 
     @Override
-    public int precede(Object o) {
-        return this.number.compareToIgnoreCase(((Celular) o).getNumber());
+    public int precede(Celular o) {
+        return this.number.compareToIgnoreCase(o.getNumber());
     }
 
     @Override
