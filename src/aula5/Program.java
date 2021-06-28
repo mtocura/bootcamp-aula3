@@ -32,5 +32,15 @@ public class Program {
        for(Celular c : celulares) {
            System.out.println(c);
        }
+
+       /*
+       Resposta Discussão Exercício 2: Nesta implementação caso quiséssemos mudar o método precede
+       teríamos que ir na classe Pessoa e/ou Celular e modificar a sobrescrita do método.
+       Acredito que para uma aplicação de pequeno/médio porte uma implementação desta maneira ainda é aceitável,
+       porém com o aumento do tamanho do projeto acredito que seria interessante usarmos o default methods na interface
+       ou modificarmos a assinatura do sort no SortUtil para ele também receber um Comparator, uma vez que, normalmente,
+       estamos fazendo o compare em variáveis de tipos primitivos, poderíamos passar via method referece o compare,
+       tornando o código um pouco mais dinâmico. Por exemplo SortUtil.sort(pessoas, String::compareTo)
+        */
     }
 }
