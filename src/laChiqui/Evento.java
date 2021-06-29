@@ -40,6 +40,7 @@ public class Evento {
     }
 
     public void estourarFogos() {
+        System.out.println("Se preparem para os fogos!!!");
         for(Map.Entry<Integer, List<FogoArtificio>> mapFogos : this.fogos.entrySet()) {
             List<FogoArtificio> fogosArtificio = mapFogos.getValue();
 
@@ -48,6 +49,7 @@ public class Evento {
     }
 
     public void cortarBolo() {
+        System.out.println("Hora de corta o bolo!!");
         this.convidados.forEach(convidado -> convidado.comerBolo());
     }
 }
