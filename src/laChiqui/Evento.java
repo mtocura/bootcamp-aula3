@@ -3,6 +3,14 @@ package laChiqui;
 import java.util.*;
 
 public class Evento {
+    /*
+    Como podemos ter fogos indivuais, pacotes e pacotes de pacotes, imaginei que a melhor solução seria um Map.
+    Primeiro para garantir a tipagem das listas de fogos, pois para permitir que uma lista tivesse outra lista dentro,
+    fora os fogos individuais isso necessitaria criar uma List<Object> ou algo do tipo, o que não é uma boa prática.
+    E, com o Map, conseguimos ter os índices (chave como int) e as listas de fogos, para fogos individuais, são listas
+    com um único fogo de artificio. Para pacotes de pacotes, na teoria são duas listas concatenadas, então no momento
+    de instanciar um pacote desse tipo basta criar uma lista que concatena com algum pacote anterior
+     */
     private List<Convidado> convidados;
     private Map<Integer, List<FogoArtificio>> fogos;
     private int contadorFogos;
