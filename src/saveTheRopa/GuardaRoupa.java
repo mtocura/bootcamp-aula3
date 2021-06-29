@@ -26,4 +26,12 @@ public class GuardaRoupa {
             vestuarios.forEach(vestuario -> System.out.println(key + ": " + vestuario));
         }
     }
+
+    public List<Vestuario> devolverVestuarios(Integer id) {
+        if(this.roupas.containsKey(id)) {
+            return this.roupas.get(id);
+        }
+
+        return null;
+    }
 }
