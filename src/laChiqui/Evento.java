@@ -1,15 +1,16 @@
 package laChiqui;
 
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class Evento {
     private List<Convidado> convidados;
     private Map<Integer, List<FogoArtificio>> fogos;
+    private int contadorFogos;
 
-    public Evento(List<Convidado> convidados, Map<Integer, List<FogoArtificio>> fogos) {
+    public Evento(List<Convidado> convidados) {
         this.convidados = convidados;
-        this.fogos = fogos;
+        this.fogos = new HashMap<>();
+        this.contadorFogos = 0;
     }
 
     public List<Convidado> getConvidados() {
@@ -26,6 +27,16 @@ public class Evento {
 
     public void setFogos(Map<Integer, List<FogoArtificio>> fogos) {
         this.fogos = fogos;
+    }
+
+    public void inserirFogos(FogoArtificio fogoArtificio) {
+        this.fogos.put(this.contadorFogos, Arrays.asList(new FogoArtificio[]{fogoArtificio}));
+        this.contadorFogos++;
+    }
+
+    public void inserirFogos(List<FogoArtificio> fogosArtificio) {
+        this.fogos.put(this.contadorFogos, fogosArtificio);
+        this.contadorFogos++;
     }
 
     public void estourarFogos() {
