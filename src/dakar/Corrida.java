@@ -93,4 +93,22 @@ public class Corrida {
             this.listaVeiculos.remove(index);
         }
     }
+
+    public Veiculo vencedor() {
+        int maior = 0;
+        List<Double> velocidade = new ArrayList<>();
+
+        for(Veiculo veiculo : this.listaVeiculos) {
+            double valor = (veiculo.getVelocidade() * veiculo.getAceleracao()) / (veiculo.getAnguloDeGiro() * (veiculo.getPeso() - veiculo.getRodas() * 100));
+            velocidade.add(valor);
+        }
+
+        for(int i = 1; i <= velocidade.size() - 1; i++) {
+            if(velocidade.get(maior) < velocidade.get(i)) {
+                maior = i;
+            }
+        }
+
+        return this.listaVeiculos.size() > 0 ? this.listaVeiculos.get(maior) : null;
+    }
 }
