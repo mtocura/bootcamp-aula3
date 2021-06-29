@@ -1,4 +1,4 @@
-package aula4.tm.ex6;
+package aula4.tm.exercicio2.ex6;
 
 import java.util.*;
 

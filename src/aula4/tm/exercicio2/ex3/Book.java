@@ -1,4 +1,4 @@
-package aula4.tm.ex3;
+package aula4.tm.exercicio2.ex3;
 
 public class Book {
     /*

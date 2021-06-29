@@ -1,4 +1,4 @@
-package aula4.tm.ex6;
+package aula4.tm.exercicio2.ex6;
 
 public class Program {
     public static void main(String[] args) {

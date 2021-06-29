@@ -1,4 +1,4 @@
-package aula4.tm.ex5;
+package aula4.tm.exercicio2.ex5;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;

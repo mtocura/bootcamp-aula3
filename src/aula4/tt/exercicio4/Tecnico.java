@@ -1,15 +1,15 @@
-package aula4.tt;
+package aula4.tt.exercicio4;
 
 import java.math.BigDecimal;
 
-public class Analista implements CLT{
+public class Tecnico implements CLT{
     private BigDecimal salarioBase;
     private Double horasSemanais;
     private Double fimDeSemana;
     private Double bonificacao;
     private Integer metaAtingida;
 
-    public Analista(BigDecimal salarioBase, Double horasSemanais, Double fimDeSemana, Double bonificacao, Integer metaAtingida) {
+    public Tecnico(BigDecimal salarioBase, Double horasSemanais, Double fimDeSemana, Double bonificacao, Integer metaAtingida) {
         this.salarioBase = salarioBase;
         this.horasSemanais = horasSemanais;
         this.fimDeSemana = fimDeSemana;
@@ -62,6 +62,6 @@ public class Analista implements CLT{
         double valor = this.salarioBase.doubleValue() + (this.metaAtingida * this.bonificacao * this.salarioBase.doubleValue());
         BigDecimal total = BigDecimal.valueOf(valor);
 
-        System.out.println("Salário base Analista: R$" + String.format("%.2f", this.salarioBase.doubleValue()) + "\nValor a receber: R$ " + String.format("%.2f", total.doubleValue()));
+        System.out.println("Salário base Técnico: R$" + String.format("%.2f", this.salarioBase.doubleValue()) + "\nValor a receber: R$ " + String.format("%.2f", total.doubleValue()));
     }
 }
