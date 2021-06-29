@@ -1,4 +1,4 @@
-package aula3.pratica2;
+package aula3.tm.exercicio2;
 
 public class Exercicio1 {
     /*

@@ -1,4 +1,4 @@
-package aula3.pratica2.ex2;
+package aula3.tm.exercicio2.ex2;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;

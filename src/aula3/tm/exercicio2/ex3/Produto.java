@@ -1,4 +1,4 @@
-package aula3.pratica2.ex3;
+package aula3.tm.exercicio2.ex3;
 
 public class Produto {
     private String name;

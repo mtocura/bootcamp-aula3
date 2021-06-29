@@ -1,4 +1,4 @@
-package aula3.pratica3;
+package aula3.tt.exercicio3;
 
 import java.util.ArrayList;
 import java.util.HashMap;
