@@ -14,4 +14,9 @@ public class FogoArtificio {
     public void setBarulho(String barulho) {
         this.barulho = barulho;
     }
+
+    @Override
+    public String toString() {
+        return this.barulho;
+    }
 }
