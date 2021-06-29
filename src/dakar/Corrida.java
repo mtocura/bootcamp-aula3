@@ -11,12 +11,16 @@ public class Corrida {
     private String nome;
     private Integer quantidadeVeiculosPermitidos;
     private List<Veiculo> listaVeiculos;
+    private SocorristaCarro socorristaCarro;
+    private SocorristaMoto socorristaMoto;
 
-    public Corrida(Double distancia, BigDecimal premioEmDolares, String nome, Integer quantidadeVeiculosPermitidos) {
+    public Corrida(Double distancia, BigDecimal premioEmDolares, String nome, Integer quantidadeVeiculosPermitidos, SocorristaCarro socorristaCarro, SocorristaMoto socorristaMoto) {
         this.distancia = distancia;
         this.premioEmDolares = premioEmDolares;
         this.nome = nome;
         this.quantidadeVeiculosPermitidos = quantidadeVeiculosPermitidos;
+        this.socorristaCarro = socorristaCarro;
+        this.socorristaMoto = socorristaMoto;
         this.listaVeiculos = new ArrayList<>();
     }
 
@@ -52,6 +56,22 @@ public class Corrida {
         this.quantidadeVeiculosPermitidos = quantidadeVeiculosPermitidos;
     }
 
+    public SocorristaCarro getSocorristaCarro() {
+        return socorristaCarro;
+    }
+
+    public void setSocorristaCarro(SocorristaCarro socorristaCarro) {
+        this.socorristaCarro = socorristaCarro;
+    }
+
+    public SocorristaMoto getSocorristaMoto() {
+        return socorristaMoto;
+    }
+
+    public void setSocorristaMoto(SocorristaMoto socorristaMoto) {
+        this.socorristaMoto = socorristaMoto;
+    }
+
     public List<Veiculo> getListaVeiculos() {
         return listaVeiculos;
     }
@@ -81,13 +101,7 @@ public class Corrida {
     }
 
     public void removerVeiculoPorPlaca(String placa) {
-        int index = -1;
-
-        for(int i = 0; i < this.listaVeiculos.size(); i++) {
-            if(this.listaVeiculos.get(i).getPlaca().equals(placa)) {
-                index = i;
-            }
-        }
+        int index = findIndexPlaca(placa);
 
         if(index != -1) {
             this.listaVeiculos.remove(index);
@@ -110,5 +124,37 @@ public class Corrida {
         }
 
         return this.listaVeiculos.size() > 0 ? this.listaVeiculos.get(maior) : null;
+    }
+
+    public void socorrerCarro(String documento) {
+        int index = findIndexPlaca(documento);
+
+        if(index != -1) {
+            this.socorristaCarro.socorrer((Carro) this.listaVeiculos.get(index));
+        } else {
+            System.out.println("Carro não inscrito na corrida!");
+        }
+    }
+
+    public void socorrerMoto(String documento) {
+        int index = findIndexPlaca(documento);
+
+        if(index != -1) {
+            this.socorristaMoto.socorrer((Moto) this.listaVeiculos.get(index));
+        } else {
+            System.out.println("Moto não inscrito na corrida!");
+        }
+    }
+
+    private int findIndexPlaca(String placa) {
+        int index = -1;
+
+        for(int i = 0; i < this.listaVeiculos.size(); i++) {
+            if(this.listaVeiculos.get(i).getPlaca().equals(placa)) {
+                index = i;
+            }
+        }
+
+        return index;
     }
 }
