@@ -14,4 +14,8 @@ public class Convidado {
     public void setNome(String nome) {
         this.nome = nome;
     }
+
+    public void comerBolo() {
+        System.out.println("Comendo bolo...");
+    }
 }
