@@ -2,6 +2,8 @@ package laChiqui;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class Program {
     public static void main(String[] args) {
@@ -13,6 +15,10 @@ public class Program {
         // pacotes de fogos de artificio
         List<FogoArtificio> pacote1 = Arrays.asList(new FogoArtificio[]{new FogoArtificio("KABUM"), new FogoArtificio("KAPOW")});
         List<FogoArtificio> pacote2 = Arrays.asList(new FogoArtificio[]{new FogoArtificio("Puff"), new FogoArtificio("POWOW")});
+
+        // pacote de pacotes
+        List<FogoArtificio> pacote3 = Stream.concat(pacote1.stream(), pacote2.stream()).collect(Collectors.toList());
+        pacote3.add(new FogoArtificio("Katapimbas"));
 
         // convidados meli
         Convidado meli1 = new Meli("João");
@@ -41,6 +47,7 @@ public class Program {
         laChiqui.inserirFogos(fogo3);
         laChiqui.inserirFogos(fogo2);
         laChiqui.inserirFogos(pacote1);
+        laChiqui.inserirFogos(pacote3);
 
         // momentos
         laChiqui.estourarFogos();
