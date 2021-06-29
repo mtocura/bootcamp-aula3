@@ -24,4 +24,12 @@ public class Vestuario {
     public void setModelo(String modelo) {
         this.modelo = modelo;
     }
+
+    @Override
+    public String toString() {
+        return "Vestuario{" +
+                "marca='" + marca + '\'' +
+                ", modelo='" + modelo + '\'' +
+                '}';
+    }
 }
