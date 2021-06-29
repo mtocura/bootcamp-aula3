@@ -3,12 +3,12 @@ package dakar;
 public class Veiculo {
     private Double velocidade;
     private Double aceleracao;
-    private Double anguloDeGiro;
+    private Integer anguloDeGiro;
     private String placa;
     private Double peso;
     private Integer rodas;
 
-    public Veiculo(Double velocidade, Double aceleracao, Double anguloDeGiro, String placa, Double peso, Integer rodas) {
+    public Veiculo(Double velocidade, Double aceleracao, Integer anguloDeGiro, String placa, Double peso, Integer rodas) {
         this.velocidade = velocidade;
         this.aceleracao = aceleracao;
         this.anguloDeGiro = anguloDeGiro;
@@ -33,11 +33,11 @@ public class Veiculo {
         this.aceleracao = aceleracao;
     }
 
-    public Double getAnguloDeGiro() {
+    public Integer getAnguloDeGiro() {
         return anguloDeGiro;
     }
 
-    public void setAnguloDeGiro(Double anguloDeGiro) {
+    public void setAnguloDeGiro(Integer anguloDeGiro) {
         this.anguloDeGiro = anguloDeGiro;
     }
 
