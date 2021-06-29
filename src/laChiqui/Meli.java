@@ -5,6 +5,7 @@ public class Meli extends Convidado{
         super(nome);
     }
 
+    @Override
     public void comerBolo() {
         System.out.println("Viva la Chiqui !!");
     }
