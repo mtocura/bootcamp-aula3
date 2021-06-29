@@ -1,4 +1,4 @@
-package aula5;
+package aula5.tm.exercicio1;
 
 public class Celular implements Precedente<Celular>{
     private String holder;

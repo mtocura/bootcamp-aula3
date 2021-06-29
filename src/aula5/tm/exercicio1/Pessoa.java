@@ -1,4 +1,4 @@
-package aula5;
+package aula5.tm.exercicio1;
 
 public class Pessoa implements Precedente<Pessoa>{
     private String nome;

@@ -1,7 +1,4 @@
-package aula5;
-
-import java.util.ArrayList;
-import java.util.List;
+package aula5.tm.exercicio1;
 
 public class Program {
     public static void main(String[] args) {
