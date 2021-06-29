@@ -75,4 +75,22 @@ public class Corrida {
             System.out.println("Quantidade máxima de veículos já atingida!");
         }
     }
+
+    public void removerVeiculo(Veiculo veiculo) {
+        this.listaVeiculos.remove(veiculo);
+    }
+
+    public void removerVeiculoPorPlaca(String placa) {
+        int index = -1;
+
+        for(int i = 0; i < this.listaVeiculos.size(); i++) {
+            if(this.listaVeiculos.get(i).getPlaca().equals(placa)) {
+                index = i;
+            }
+        }
+
+        if(index != -1) {
+            this.listaVeiculos.remove(index);
+        }
+    }
 }
